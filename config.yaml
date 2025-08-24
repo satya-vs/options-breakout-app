@@ -1,0 +1,10 @@
+# Scanner configuration
+scan_interval_seconds: 10
+max_watchlist_size: 10
+target_delta: 0.35
+min_option_volume: 50
+min_option_oi: 100
+max_spread_pct: 0.08
+preferred_dte_min: 0
+preferred_dte_max: 2
+top_k: 5
