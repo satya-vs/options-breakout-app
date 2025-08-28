@@ -245,9 +245,15 @@ async def set_watchlist(wl: WatchlistIn):
     state['watchlist'] = wl2
     return {"status":"ok","watchlist":state['watchlist']}
 
+from fastapi.responses import JSONResponse
+
 @app.get("/top5")
-async def top5():
-    return JSONResponse({"top5": state['candidates'], "last_scan': state['last_scan']})
+async def get_top5():
+    return JSONResponse({
+        "top5": state['candidates'],
+        "last_scan": state['last_scan']
+    })
+
 
 @app.get("/status")
 async def status():
